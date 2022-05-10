@@ -1,0 +1,15 @@
+Необходимые для запуска библиотеки:
+logging
+telegram
+telegram.ext
+telebot
+pyjokes
+googletrans
+random
+lxml
+requests
+tqdm
+bs4
+urllib.parse
+re
+collections
