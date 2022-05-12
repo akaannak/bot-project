@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 defaultRecipient = 'anyakek'
-TOKEN = '5115307867:AAHIQOIXPprhC2YcpgrZzdz41YZjNpx6ioc'
+TOKEN = '5229590905:AAENPcTqnRpar0AlsJCBCWCv0QmRhAzqUQk'
 api_id = 10221412
 api_hash = '32a69c2376c8ce1805e142083abb136a'
 bot = telebot.TeleBot(TOKEN)
