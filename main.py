@@ -117,7 +117,7 @@ def for_me(update, _):
 
 
 def for1(update, _):
-    def scrabThePage(page_number, complCollection, link):
+    def com(page_number, complCollection, link):
         page = requests.get(link + str(page_number) + '/')
         tree2 = html.fromstring(page.content)
         complCollection.extend(tree2.xpath('//a[@class="post-copy btn"]/@data-clipboard-text'))
@@ -147,7 +147,7 @@ def for1(update, _):
     query.edit_message_text(text="Сбор комплиментов...")
     i = 1
     while i <= 6:
-        scrabThePage(i, all_compliments, 'https://datki.net/komplimenti/zhenshine/page/')
+        com(i, all_compliments, 'https://datki.net/komplimenti/zhenshine/page/')
         i += 1
     bot.send_message(chat_id=update.effective_chat.id,
                      text='Сбор завершен')
@@ -156,7 +156,7 @@ def for1(update, _):
     
     
 def for2(update, _):
-    def scrabThePage(page_number, complCollection, link):
+    def com2(page_number, complCollection, link):
         page = requests.get(link + str(page_number) + '/')
         tree = html.fromstring(page.content)
         complCollection.extend(tree.xpath('//a[@class="post-copy btn"]/@data-clipboard-text'))
@@ -175,7 +175,7 @@ def for2(update, _):
     query.edit_message_text(text="Сбор комплиментов...")
     i = 1
     while i <= 6:
-        scrabThePage(i, all_compliments, 'https://datki.net/komplimenti/muzhchine/page/')
+        com2(i, all_compliments, 'https://datki.net/komplimenti/muzhchine/page/')
         i += 1
     bot.send_message(chat_id=update.effective_chat.id,
                      text='Сбор завершен')
